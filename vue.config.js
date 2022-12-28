@@ -5,7 +5,7 @@
 const path = require("path");
 const isProd = process.env.NODE_ENV === "production";
 module.exports = {
-  publicPath: isProd ? "/test" : "/", // 打包后的文件引入路劲 平台
+  publicPath: isProd ? "/test/" : "/", // 打包后的文件引入路劲 平台
   outputDir: "dist",
   assetsDir: "static",
   productionSourceMap: false, // 去除生成环境source map
@@ -17,7 +17,7 @@ module.exports = {
       directory: path.join(__dirname, "static"),
     },
     devMiddleware: {
-      publicPath: isProd ? "/test" : "/",
+      publicPath: isProd ? "/test/" : "/",
     },
     port: 8080,
     compress: true,
